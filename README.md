@@ -122,6 +122,10 @@ http://localhost:5000/
 ```
 
 ![Index](https://github.com/Manik-Jain/EMR_API/blob/develop/images/Index.png)
+![Image_1](https://github.com/Manik-Jain/EMR_API/blob/develop/images/image_1.png)
+![Image_2](https://github.com/Manik-Jain/EMR_API/blob/develop/images/image_2.png)
+![Image_3](https://github.com/Manik-Jain/EMR_API/blob/develop/images/Screenshot%202020-11-02%20at%2021.46.43.png)
+![Image_4](https://github.com/Manik-Jain/EMR_API/blob/develop/images/image_4.png)
 
 Depending on the entity and operation, the user can perform the tests.
 
