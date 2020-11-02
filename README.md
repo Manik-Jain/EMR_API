@@ -31,7 +31,7 @@ Please refer section (Automated default Database creation) for details.
 ## Project structure
 
 The API has been written in Python v3.7 using [Flask-RESTPlus](https://github.com/python-restx/flask-restx) library.
-The API comes with a build-in [Swagger UI](https://swagger.io/tools/swagger-ui/) that can be used to visualise and test the API methods.
+The API comes with a built-in [Swagger UI](https://swagger.io/tools/swagger-ui/) that can be used to visualise and test the API methods.
 
 ## Python packages required
 
@@ -106,6 +106,19 @@ python initialiseDB.py
 ```
 
 ## API execution
+
+Once the data has been loaded, the API can be triggered with the following command : 
+
+```python
+python launchApp.py
+```
+This will load the API in [Swagger UI](https://swagger.io/tools/swagger-ui/) at 
+
+```
+http://localhost:5000/
+```
+
+Depending on the entity and operation, the user can perform the tests.
 
 ## Permissions
 The rights to push to master/develop have been reserved by author : [Manik Jain](https://github.com/Manik-Jain).
