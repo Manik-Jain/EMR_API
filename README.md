@@ -8,6 +8,8 @@ This Python API provides the functions for the [EMR](https://en.wikipedia.org/wi
 3. Patient - the entity being managed by the system. 
 ```
 
+More details on EER and IFD can be tracked under [EMR_Data modelling](https://github.com/Manik-Jain/CSBC_1010_Data_Modelling)
+
 The API has ability to interact with both [MySql](https://www.mysql.com/) (tested with local server) and [MongoDB](https://www.mongodb.com/) (tested with both local and cloud cluster).
 The API provides an automated script to create a default database with zero SQL commands executed manually.
 Please refer section (Automated default Database creation) for details.
