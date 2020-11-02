@@ -75,7 +75,17 @@ flush privileges;
 
 ## Automated default Database creation
 
-Once the project has been cloned and the default user has been created in MySql server, please navigate to initialiseDatabase/initDb.py and modify these two Python dictionaries : 
+Once the project has been cloned and the default user has been created in MySql server, the user can perform a one time load database feature that will help to create the following :
+
+```
+a) Sequencers
+b) Tables
+c) Index
+d) Views
+e) load data in lookup tables
+```
+
+To do this, please navigate to initialiseDatabase/initDb.py and modify these two Python dictionaries : 
 
 ```python
 
@@ -88,16 +98,14 @@ config = {
 
 DB_NAME = 'EMR'
 ```
+Once the steps are done, please run initialiseDB.py script by using the following command from python shell :
 
-This basic configuraion will create the following :
+```python
 
+python initialiseDB.py
 ```
-a) Sequencers
-b) Tables
-c) Index
-d) Views
-e) load data in lookup tables
-```
+
+## API execution
 
 ## Permissions
 The rights to push to master/develop have been reserved by author : [Manik Jain](https://github.com/Manik-Jain).
