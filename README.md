@@ -3,7 +3,7 @@
 This Python API provides the functions for the [EMR](https://en.wikipedia.org/wiki/Electronic_health_record) operations for three entities : 
 
 ```
-1. Admin - can perform CRUD + View operations for Care Providers and Patients.
+1. **Admin** - can perform CRUD + View operations for Care Providers and Patients.
 2. Care Provider - can perform CRUD + View operations for patients, besides adding patient notes.
 3. Patient - the entity being managed by the system. 
 ```
