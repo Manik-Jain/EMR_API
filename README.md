@@ -15,12 +15,19 @@ System requirements to run API :
 ```
 1. Operating System : MacOS / Windows (preferred : MacOS)
 2. Python : 3.6 or higher
-3. IDE : [Anaconda](https://docs.anaconda.com/anaconda/install/) Navigator with PyCharm installed, can be downloaded from : https://docs.anaconda.com/anaconda/install/
-4. XAMPP : a local server that will help to connect to Databse. Can be downloaded from : https://www.apachefriends.org/download.html
-5. DBeaver : an open source database tool. Can be downloaded from : https://dbeaver.io/download/
-6. MongoDB (Optional if using local Mongo instance)  : a NoSql collection based database. can be downloaded from. : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-7. MongoDB compass (Optional if using local Mongo instance) : Mongo client IDE for local usage. Can be downloaded from : https://www.mongodb.com/try/download/compass
-8. Mongo Atlas cluster (Optional if using Mongo cloud) : please follow the steps on https://account.mongodb.com/account/login?n=%2Fv2%2F5f9a0c5e88f39e768ecf1ccd&nextHash=%23metrics%2FreplicaSet%2F5f9a0d7c94d89c1438088962%2Fexplorer%2FloginDetails%2Fusers%2Ffind to create a Mongo cloud cluster. At the end, the portal will provide a URL that will help to connect to cluster. Please keep it safe and the next steps will explain how to use it. 
+3. IDE : Anaconda Navigator with PyCharm installed, 
+          can be downloaded from : https://docs.anaconda.com/anaconda/install/
+4. XAMPP : a local server that will help to connect to Databse. 
+          Can be downloaded from : https://www.apachefriends.org/download.html
+5. DBeaver : an open source database tool. 
+          Can be downloaded from : https://dbeaver.io/download/
+6. MongoDB (Optional if using local Mongo instance)  : a NoSql collection based database. 
+          can be downloaded from : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+7. MongoDB compass (Optional if using local Mongo instance) : Mongo client IDE for local usage. 
+          Can be downloaded from : https://www.mongodb.com/try/download/compass
+8. Mongo Atlas cluster (Optional if using Mongo cloud) : please follow the steps on 
+  https://account.mongodb.com/account/loginn=%2Fv2%2F5f9a0c5e88f39e768ecf1ccd&nextHash=%23metrics%2FreplicaSet%2F5f9a0d7c94d89c1438088962%2Fexplorer%2FloginDetails%2Fusers%2Ffind to create a Mongo cloud cluster. 
+  At the end, the portal will provide a URL that will help to connect to cluster. Please keep it safe and the next steps will explain how to use it. 
 ```
 
 
