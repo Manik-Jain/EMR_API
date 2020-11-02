@@ -15,7 +15,7 @@ System requirements to run API :
 ```
 1. Operating System : MacOS / Windows (preferred : MacOS)
 2. Python : 3.6 or higher
-3. IDE : Anaconda Navigator with PyCharm installed, can be downloaded from : https://docs.anaconda.com/anaconda/install/
+3. IDE : [Anaconda](https://docs.anaconda.com/anaconda/install/) Navigator with PyCharm installed, can be downloaded from : https://docs.anaconda.com/anaconda/install/
 4. XAMPP : a local server that will help to connect to Databse. Can be downloaded from : https://www.apachefriends.org/download.html
 5. DBeaver : an open source database tool. Can be downloaded from : https://dbeaver.io/download/
 6. MongoDB (Optional if using local Mongo instance)  : a NoSql collection based database. can be downloaded from. : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
