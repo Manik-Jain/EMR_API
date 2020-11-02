@@ -53,7 +53,7 @@ Please clone and pull develop for most recent updates
 ```
 
 ## Permissions
-The rights to push to master/develop have been reserved by author : [Manik Jain] (https://github.com/Manik-Jain)
+The rights to push to master/develop have been reserved by author : [Manik Jain](https://github.com/Manik-Jain)
 Kindly fork the repository and raise a pull request to contribute to the project.
 
 ## Future scope
