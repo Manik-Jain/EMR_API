@@ -61,9 +61,9 @@ Please clone and pull develop for most recent updates
 4. git pull develop
 ```
 
-Once the repository has been cloned, please follow the setps mentioned in Database commands section to create a default user with granted previliges.
-
 ## Database Commands
+
+Once the repository has been cloned, please execute these SQL commands in Database to create a default user with granted previliges.
 
 ```
 CREATE USER IF NOT EXISTS emrHashUser@localhost IDENTIFIED BY '045b95b4047406cd995fbdf3c9a3fd95fb496128ea237b1cdc543c96e509b8e9';
