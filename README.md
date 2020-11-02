@@ -121,6 +121,8 @@ This will load the API in [Swagger UI](https://swagger.io/tools/swagger-ui/) at
 http://localhost:5000/
 ```
 
+![Index](https://github.com/Manik-Jain/EMR_API/blob/develop/images/Index.png)
+
 Depending on the entity and operation, the user can perform the tests.
 
 ## Permissions
