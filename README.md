@@ -9,6 +9,8 @@ This Python API provides the functions for the [EMR](https://en.wikipedia.org/wi
 ```
 
 The API has ability to interact with both MySql (tested with local server) and MongoDB (tested with both local and cloud cluster).
+The API provides an automated script to create a default database with zero SQL commands executed manually.
+Please refer section (Automated default Database creation) for details.
 
 ## System requirements : 
 
@@ -46,20 +48,8 @@ Depending on the version of Python that you are running in your machine, please 
 7. pymongo
 8. dnspython
 9. urllib3
-
 ```
 
-## Database Commands
-
-```
-CREATE database EMR_1;
-
-CREATE USER IF NOT EXISTS emrHashUser@localhost IDENTIFIED BY '045b95b4047406cd995fbdf3c9a3fd95fb496128ea237b1cdc543c96e509b8e9';
-
-GRANT ALL PRIVILEGES ON *.* TO emrHashUser@localhost;
-
-flush privileges;
-```
 ## Project status
 
 Please clone and pull develop for most recent updates
@@ -69,6 +59,44 @@ Please clone and pull develop for most recent updates
 2. git branch --all
 3. git checkout develop
 4. git pull develop
+```
+
+Once the repository has been cloned, please follow the setps mentioned in Database commands section to create a default user with granted previliges.
+
+## Database Commands
+
+```
+CREATE USER IF NOT EXISTS emrHashUser@localhost IDENTIFIED BY '045b95b4047406cd995fbdf3c9a3fd95fb496128ea237b1cdc543c96e509b8e9';
+
+GRANT ALL PRIVILEGES ON *.* TO emrHashUser@localhost;
+
+flush privileges;
+```
+
+## Automated default Database creation
+
+Once the project has been cloned and the default user has been created in MySql server, please navigate to initialiseDatabase/initDb.py and modify these two Python dictionaries : 
+
+```python
+
+config = {
+  'user': 'emrHashUser',
+  'password': '045b95b4047406cd995fbdf3c9a3fd95fb496128ea237b1cdc543c96e509b8e9',
+  'host': '127.0.0.1',
+  'raise_on_warnings': True
+}
+
+DB_NAME = 'EMR'
+```
+
+This basic configuraion will create the following :
+
+```
+a) Sequencers
+b) Tables
+c) Index
+d) Views
+e) load data in lookup tables
 ```
 
 ## Permissions
