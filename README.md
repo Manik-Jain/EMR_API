@@ -6,12 +6,11 @@ This Python API provides the functions for the EMR (https://en.wikipedia.org/wik
 1. Admin - can perform CRUD + View operations for Care Providers and Patients.
 2. Care Provider - can perform CRUD + View operations for patients, besides adding patient notes.
 3. Patient - the entity being managed by the system. 
-  (Future scope : They have the right to grant/revoke consent share their EMR information with trusted users over Blockchain)
 ```
 
 The API has ability to interact with both MySql (tested with local server) and MongoDB (tested with both local and cloud cluster).
 
-System requirements to run API : 
+## System requirements : 
 ```
 1. Operating System : MacOS / Windows (preferred : MacOS)
 2. Python : 3.6 or higher
@@ -42,6 +41,23 @@ GRANT ALL PRIVILEGES ON *.* TO emrHashUser@localhost;
 
 flush privileges;
 ```
+## Project status
 
+Please clone and pull develop for most recent updates
 
-Kindly checkout develop for most latest changes.
+```
+1. git clone 
+2. git branch --all
+3. git checkout develop
+4. git pull develop
+```
+
+## Permissions
+The rights to push to master/develop have been reserved by author : [Manik Jain] (https://github.com/Manik-Jain)
+Kindly fork the repository and raise a pull request to contribute to the project.
+
+## Future scope
+```
+1. Patient will have the right to grant/revoke consent share their EMR information with trusted users over Blockchain
+
+```
