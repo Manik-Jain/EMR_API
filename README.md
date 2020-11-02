@@ -127,6 +127,9 @@ http://localhost:5000/
 ![Image_3](https://github.com/Manik-Jain/EMR_API/blob/develop/images/Screenshot%202020-11-02%20at%2021.46.43.png)
 ![Image_4](https://github.com/Manik-Jain/EMR_API/blob/develop/images/image_4.png)
 
+Angular Screen which is an on-going project
+![AngularUI](https://github.com/Manik-Jain/EMR_API/blob/develop/images/Angular_UI.png)
+
 Depending on the entity and operation, the user can perform the tests.
 
 ## Permissions
