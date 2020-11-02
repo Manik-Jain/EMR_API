@@ -1,6 +1,6 @@
 # EMR_API
 
-This Python API provides the functions for the EMR (https://en.wikipedia.org/wiki/Electronic_health_record) operations for three entities : 
+This Python API provides the functions for the [EMR](https://en.wikipedia.org/wiki/Electronic_health_record) operations for three entities : 
 
 ```
 1. Admin - can perform CRUD + View operations for Care Providers and Patients.
