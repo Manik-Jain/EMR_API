@@ -32,6 +32,7 @@ Please refer section (Automated default Database creation) for details.
 
 The API has been written in Python v3.7 using [Flask-RESTPlus](https://github.com/python-restx/flask-restx) library.
 The API comes with a built-in [Swagger UI](https://swagger.io/tools/swagger-ui/) that can be used to visualise and test the API methods.
+The [Angular9](https://angular.io/) based User Interface is underway, and can be tracked for latest update under [EMR_UI](https://github.com/Manik-Jain/EMR_UI).
 
 ## Python packages required
 
