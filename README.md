@@ -1,6 +1,6 @@
 # EMR_API
 
-This API provides the functions for the EMR (https://en.wikipedia.org/wiki/Electronic_health_record) operations.
+This Python API provides the functions for the EMR (https://en.wikipedia.org/wiki/Electronic_health_record) operations.
 
 Kindly checkout develop for most latest changes.
 
