@@ -53,6 +53,8 @@ Depending on the version of Python that you are running in your machine, please 
 9. urllib3
 ```
 
+If you are using Anaconda/PyCharm IDE, this can be done using Environments/ Default settings respectively.
+
 ## Project status
 
 Please clone and pull develop for most recent updates
