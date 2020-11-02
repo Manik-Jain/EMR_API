@@ -1,0 +1,6 @@
+
+collections = {
+
+    'LOGIN' : 'loginDetails'
+
+}

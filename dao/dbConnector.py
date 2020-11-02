@@ -2,6 +2,7 @@
 
 import mysql.connector
 from mysql.connector import errorcode
+from initialiseDatabase.initDB import *
 
 class DBConnector:
 
@@ -9,10 +10,8 @@ class DBConnector:
 
     def __init__(self):
         try:
-            self.connection = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            database = "EMR")
+            self.connection = mysql.connector.connect(**config)
+            self.connection.database = DB_NAME
 
         except mysql.connector.Error as err:
           if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:

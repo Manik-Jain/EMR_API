@@ -4,10 +4,12 @@ from flask_restx import Namespace, Resource, fields
 from dao.careProviderDao import *
 from dao.employeeDao import *
 from uuid import uuid4
+from services.updateService import *
 
 api = Namespace('careProvider', description='Care Providers related operations')
 careProviderDao = CareProviderDao()
 employeeDao= EmployeeDao()
+updateService = UpdateService()
 
 newCareProvider = api.model('NewCareProvider', {
         'first_name' : fields.String(required = True, description = 'CareProvider first name'),
@@ -23,7 +25,9 @@ careProvider = api.inherit('CareProvider', newCareProvider, {
         })
 
 updateCareProvider = api.inherit('UpdateCareProvider', newCareProvider, {
-    'per_visit_charges' : fields.String(required=True, description = 'careProvider per_visit_charges')
+    'per_visit_charges' : fields.String(required=True, description = 'careProvider per_visit_charges'),
+    'changedBy' : fields.String(required = True, description = 'the updating user Id'),
+    'status' : fields.String(required=True, description = 'admin status')
 })
 
 @api.route('careProvider')
@@ -65,5 +69,17 @@ class CareProvider(Resource):
         '''delete a care provider from system'''
         careProviderDao.deleteCareProvider(id)
         return 'careProvider {} deleted successfully'.format(id), 200
+
+    @api.expect(updateCareProvider)
+    @api.marshal_with(updateCareProvider)
+    def put(self, id):
+        '''update a care provider in database'''
+        currCareProvider = self.get(id)
+        updatedCareProvider = api.payload
+        updatedCareProvider['id'] = id
+        updateService.updateCareProvider(currCareProvider, updatedCareProvider)
+        return updatedCareProvider, 200
+
+
 
 

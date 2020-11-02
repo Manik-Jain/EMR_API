@@ -36,6 +36,10 @@ class AdminDao:
 
     def addAdmin(self, id):
         '''add a new admin to database'''
-        query = QUERIES['ADD_ADMIN'].format(id)
-        self.cursor.execute(query)
+        self.cursor.execute(QUERIES['ADD_ADMIN'].format(id))
+        self.cursor.execute('commit')
+
+    def updateAdmin(self, id):
+        '''updates admin record in database'''
+        self.cursor.execute(QUERIES['UPDATE_ADMIN'].format(id))
         self.cursor.execute('commit')

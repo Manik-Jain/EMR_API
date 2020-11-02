@@ -39,3 +39,8 @@ class CareProviderDao:
         self.cursor.execute('commit')
         self.cursor.execute(QUERIES['DELETE_EMPLOYEE'].format(id))
         self.cursor.execute('commit')
+
+    def updateCareProvider(self, careProvider):
+        '''update care provider detail in database'''
+        self.cursor.execute(QUERIES['UPDATE_CARE_PROVIDER'], careProvider)
+        self.cursor.execute('commit')

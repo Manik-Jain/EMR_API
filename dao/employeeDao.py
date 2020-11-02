@@ -39,3 +39,8 @@ class EmployeeDao:
     def deleteEmployee(self, id):
         self.cursor.execute(QUERIES['DELETE_EMPLOYEE'].format(id))
         self.cursor.execute('commit')
+
+    def updateEmployee(self, employee, id):
+        '''update an employee record in database'''
+        self.cursor.execute(QUERIES['UPDATE_EMPLOYEE'].format(id), employee)
+        self.cursor.execute('commit')

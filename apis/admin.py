@@ -4,9 +4,13 @@ from flask_restx import Namespace, Resource, fields
 from uuid import uuid4
 from dao.adminDao import *
 from dao.employeeDao import *
+from mongoDao.mongoConnector import *
+from services.updateService import *
 
 adminDao = AdminDao()
 employeeDao = EmployeeDao()
+mongoConnector = MongoConnector()
+updateService = UpdateService()
 api = Namespace('admin', description='Admin related operations')
 
 newAdmin = api.model('NewAdmin', {
@@ -22,19 +26,18 @@ admin = api.inherit('Admin', newAdmin, {
         })
 
 updateAdmin = api.inherit('UpdateAdmin', newAdmin, {
-    'status' : fields.String(required=True, description = 'admin status')
+    'status' : fields.String(required=True, description = 'admin status'),
+    'changedBy' : fields.String(required = True, description = 'userId of the user performing the update')
 })
-
-ADMINS = [
-        {'id' : '1', 'first_name' : 'admin_1'}
-        ]
 
 @api.route('admin')
 class AdminList(Resource):
+
     @api.doc('list admins')
     @api.marshal_list_with(admin)
     def get(self):
         '''returns a list of all admins'''
+        print('Get all admins accessed')
         return adminDao.fetchAllAdmins()
     
     @api.doc('onboard new Employee Admin')
@@ -47,6 +50,7 @@ class AdminList(Resource):
         input['status'] = 'active'
         input['isAdmin'] = True
         employeeDao.addNewEmployee(input)
+        mongoConnector.getMongoClient().loginDetails.users.insert_one({'user': input['first_name'], 'passwd' : 'manik'})
         return input, 201
         
     
@@ -70,10 +74,9 @@ class Admin(Resource):
     def put(self, id):
         '''update an admin details'''
         admin = self.get(id)
-        admin.update(api.payload)
-        #audit admin update
-        ADMINS.append(admin)
-        return admin,200
+        input = api.payload
+        updateService.updateAdmin(admin, input)
+        return input,200
     
     @api.doc('delete an admin')
     def delete(self, id):
