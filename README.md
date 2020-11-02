@@ -28,7 +28,28 @@ The API has ability to interact with both MySql (tested with local server) and M
   https://account.mongodb.com/account/loginn=%2Fv2%2F5f9a0c5e88f39e768ecf1ccd&nextHash=%23metrics%2FreplicaSet%2F5f9a0d7c94d89c1438088962%2Fexplorer%2FloginDetails%2Fusers%2Ffind to create a Mongo cloud cluster. 
   At the end, the portal will provide a URL that will help to connect to cluster. Please keep it safe and the next steps will explain how to use it. 
 ```
+## Project structure
 
+The API has been written in Python v3.7 using [Flask-RESTPlus](https://github.com/python-restx/flask-restx) library.
+The API comes with a build-in [Swagger UI](https://swagger.io/tools/swagger-ui/) that can be used to visualise and test the API methods.
+
+## Python packages required
+
+Depending on the version of Python that you are running in your machine, please use pip (for Python v2+) and pip3 (for Python v3+) to have the following packages in your machine:
+
+```python
+
+1. Flask
+2. Flask-Cors
+3. flask-restplus
+4. flask-restx
+5. mysql-connector
+6. mysql-connector-python
+7. pymongo
+8. dnspython
+9. urllib3
+
+```
 
 ## Database Commands
 
@@ -53,7 +74,7 @@ Please clone and pull develop for most recent updates
 ```
 
 ## Permissions
-The rights to push to master/develop have been reserved by author : [Manik Jain](https://github.com/Manik-Jain)
+The rights to push to master/develop have been reserved by author : [Manik Jain](https://github.com/Manik-Jain).
 Kindly fork the repository and raise a pull request to contribute to the project.
 
 ## Future scope
