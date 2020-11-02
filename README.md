@@ -8,7 +8,7 @@ This Python API provides the functions for the [EMR](https://en.wikipedia.org/wi
 3. Patient - the entity being managed by the system. 
 ```
 
-The API has ability to interact with both MySql (tested with local server) and MongoDB (tested with both local and cloud cluster).
+The API has ability to interact with both [MySql](https://www.mysql.com/) (tested with local server) and [MongoDB](https://www.mongodb.com/) (tested with both local and cloud cluster).
 The API provides an automated script to create a default database with zero SQL commands executed manually.
 Please refer section (Automated default Database creation) for details.
 
@@ -126,7 +126,6 @@ The rights to push to master/develop have been reserved by author : [Manik Jain]
 Kindly fork the repository and raise a pull request to contribute to the project.
 
 ## Future scope
-```
-1. Patient will have the right to grant/revoke consent share their EMR information with trusted users over Blockchain
 
-```
+1. Patient will have the right to grant/revoke consent share their EMR information with trusted users over Blockchain
+2. A [blockchain based payment API](https://github.com/Manik-Jain/eth-payment-gateway) is underway that will be integrated with the [EMR_UI](https://github.com/Manik-Jain/EMR_UI) so as to enable Ether based bill settlements.
