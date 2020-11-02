@@ -3,7 +3,7 @@
 
 Kindly checkout develop for most latest changes.
 
-#Commands
+## Database Commands
 
 ```
 CREATE database EMR_1;
